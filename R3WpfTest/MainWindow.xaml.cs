@@ -22,8 +22,8 @@ namespace R3WpfTest
 
             var d1 = Observable.EveryValueChanged(this, x => x.Width).Subscribe(x => WidthText.Text = x.ToString());
             var d2 = Observable.EveryValueChanged(this, x => x.Height).Subscribe(x => HeightText.Text = x.ToString());
-
-            disposable = Disposable.Combine(d1, d2);
+            var d3 = Observable.IntervalFrame(60).Subscribe(x => TimeText.Text = DateTime.Now.ToString());
+            disposable = Disposable.Combine(d1, d2, d3);
         }
 
         protected override void OnClosed(EventArgs e)

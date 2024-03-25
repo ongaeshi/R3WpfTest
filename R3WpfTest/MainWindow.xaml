@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:R3WpfTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="300">
+        Title="MainWindow" Height="400" Width="400">
     <Grid>
         <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="32">Time:&#160;</TextBlock>
+                <TextBlock x:Name="TimeText" FontSize="32"/>
+            </StackPanel>
             <TextBlock FontSize="32">Width:</TextBlock>
             <TextBlock x:Name="WidthText" FontSize="32"/>
             <TextBlock FontSize="32">Height:</TextBlock>
